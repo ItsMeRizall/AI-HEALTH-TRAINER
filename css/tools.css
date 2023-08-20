@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+  height: 4000px;
+}
+
+hr{
+  border: none;
+  margin: 0 1rem;
+  border-top: 3px solid #F04823;
+  height: 10px;
+}
+
+.wrap-content{
+    padding: 5rem;
+    background: black;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.wrap-content > .content{
+    width: 650px;
+}
+
+.wrap-content > .content > h3 {
+    color: #F04823;
+    font-style: italic;
+    font-size: 1.7rem;
+}
+
+.wrap-content > .content > p {
+    color: #ffff;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.tools-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 450px;
+    margin-top: 30px;
+  }
+  
+  .item {
+    background-color: #434242;
+    color: white;
+    width: calc(33.33% - 10px); /* Lebar 3 div di atas dengan jarak */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .item > h5 {
+    width: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    background: gray;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 900;
+    z-index: 10;
+  }
+
+  .item > p{
+    margin-top: 10px;
+    color: #ffff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    z-index: 10;
+  }
+
+  .item > img{
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    z-index: 0;
+  }
+
+  .item > .css{
+    position: absolute;
+    width: 300px;
+    top: 5px;
+    left: 200px;
+    z-index: 0;
+  }
+
+  .item > .html{
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    z-index: 0;
+    width: 300px;
+  }
+
+  .item > .mysql{
+    position: absolute;
+    top: -50px;
+    left: 90px;
+    width: 400px;
+    rotate: -5deg;
+  }
+
+  .item > .py{
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    width: 300px;
+  }
+
+  .item > .django{
+    position: absolute;
+    top: -20px;
+    left: 350px;
+    width: 350px;
+    rotate: -15deg;
+  }
+  
+  .item > .media-pype{
+    position: absolute;
+    top: -40px;
+    left: 300px;
+    width: 350px;
+  }
+
+  .item:nth-child(n+4) {
+    width: calc(50% - 10px); /* Lebar 2 div di bawah dengan jarak */
+  }
+
+  .item:hover{
+    scale: 1.01;
+    cursor: pointer;
+    transition: ease-in 200ms;
+  }
+  
+
+  /* Existing styles */
+
+/* Add a media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+
+  .container > .wrap-content {
+    padding: 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .tools-item {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Adjust height for variable content */
+  }
+
+  .item {
+    width: 100%; /* Expand items to full width */
+    margin-bottom: 20px;
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .item > img {
+    top: 10px;
+    left: 50%; /* Center images horizontally */
+    transform: translateX(-50%);
+  }
+
+  /* Adjust positioning for other images */
+  .item > .css, .item > .html, .item > .mysql, .item > .py, .item > .django, .item > .media-pype {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Adjust image width */
+  }
+
+  .item > h5, .item > p {
+    text-align: center; /* Center text */
+  }
+
+  .container > .wrap-content > .content {
+    width: 100%; /* Expand content width */
+  }
+}
