@@ -11,7 +11,7 @@ body{
 hr{
   border: none;
   margin: 0 3rem;
-  border: 3px solid #F04823;
+  border: 2px solid #ffffff;
 }
 
 .wrap-content{
@@ -30,9 +30,12 @@ hr{
 }
 
 .wrap-content > .content > p {
-    color: #ffff;
+    color: #ffffff;
     font-size: 0.9rem;
     margin-top: 5px;
+}
+.wrap-content > .teams {
+  width: 630px;
 }
 
 .tools-item {
@@ -85,50 +88,51 @@ hr{
     position: absolute;
     width: 230px;
     top: 5px;
-    left: 250px;
+    left: 220px;
     z-index: 0;
     rotate: -15deg;
   }
 
   .item > .html{
     position: absolute;
-    top: 40px;
-    left: 240px;
+    top: 50px;
+    left: 130px;
     z-index: 0;
-    width: 250px;
+    width: 230px;
     rotate: -15deg;
   }
 
   .item > .mysql{
     position: absolute;
-    top: -50px;
-    left: 90px;
-    width: 400px;
-    /* rotate: -5deg; */
+    top: -10px;
+    left: 40px;
+    width: 380px;
+    rotate: -15deg;
   }
 
   .item > .py{
     position: absolute;
-    top: 20px;
-    left: 270px;
-    width: 250px;
+    top: 5px;
+    left: 160px;
+    width: 230px;
     rotate: -25deg;
 
   }
 
   .item > .django{
     position: absolute;
-    top: -20px;
-    left: 350px;
-    width: 350px;
-    /* rotate: -15deg; */
+    top: 30px;
+    left: 250px;
+    width: 330px;
+    rotate: -15deg;
   }
   
   .item > .media-pype{
     position: absolute;
-    top: -40px;
-    left: 300px;
-    width: 350px;
+    top: -5px;
+    left: 250px;
+    width: 330px;
+    rotate: -15deg;
   }
 
   .item:nth-child(n+4) {
