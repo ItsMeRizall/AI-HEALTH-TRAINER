@@ -202,6 +202,34 @@ hr{
     width: 350px;
     
   }
+
+  .footer-container{
+    background: #28282A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .footer-container > .wrap-university > .university {
+    color: white;
+    width: 250px;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+  }
+
+  .footer-container > .logo-team > img {
+    width: 250px;
+  }  
+
+  .footer-container > .wrap-university > .university > img{
+    width: 50px;
+  }
   
   @media screen and (min-width: 1024px) {
     .grid-container {
@@ -266,5 +294,15 @@ hr{
 
     .grid-container {
       grid-template-columns: 1fr;
+    }
+
+    .footer-container > .wrap-university > .university {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      gap: 60px;
     }
   }
