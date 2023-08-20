@@ -309,4 +309,29 @@ hr{
       flex-direction: column;
       gap: 60px;
     }
+
+    .item > .css{
+      rotate: 0deg;
+    }
+  
+    .item > .html{
+      rotate: 0deg;
+    }
+  
+    .item > .mysql{
+      rotate: 0deg;
+    }
+  
+    .item > .py{
+      rotate: 0deg;
+  
+    }
+  
+    .item > .django{
+      rotate: 0deg;
+    }
+    
+    .item > .media-pype{
+      rotate: 0deg;
+    }
   }
