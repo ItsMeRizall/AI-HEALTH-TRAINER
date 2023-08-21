@@ -8,6 +8,200 @@ body{
   background: black;
 }
 
+nav {
+  background-color: #040404;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none; /* Sembunyikan tombol hamburger secara default */
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Close Icon */
+.close-icon {
+  display: none; /* Sembunyikan simbol "X" secara default */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.close-icon .line-1 {
+  transform: rotate(45deg);
+}
+
+.close-icon .line-2 {
+  transform: rotate(-45deg);
+}
+
+
+section {
+  padding-top: 60px;
+  background-color: black;
+}
+
+
+.utama{
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  align-items: center;
+}
+
+.logo img {
+  width: 189px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.menu  .login {
+  padding: 6px 30px;
+  background-color: #F04823;
+  border-radius: 25px;
+  font-weight:bold ;
+}
+
+.menu a:hover {
+  color: #F04823;
+}
+
+.menu .login:hover {
+  color: white;
+  background-color: #212121;
+  transition: ease-in-out 200ms;
+}
+.container-home {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem;
+  padding-top: 60px;
+  background: url(../img/HomePage/homepage.png);
+  background-size: cover;
+  height: 580px;
+  color: white;
+}
+.content-home {
+  width: 580px;
+}
+
+.content-home h1 {
+  font-size: 96px;
+  font-style: italic;
+  line-height: 90px;
+}
+
+.content-home span {
+  color: #F04823;
+}
+
+.content-home a.login {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #F04823;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.content-home a.login img {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.content-home a.login:hover {
+  background-color: #212121;
+  text-decoration: none;
+}
+
+
+.container-about {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+  padding-top: 60px;
+  background-color: black;
+  height: 500px;
+}
+
+.content-about {
+  width: 697px;
+  color: white;
+}
+
+.content-about h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #F04823;
+  margin-bottom: 5px;
+}
+
+.content-about p {
+  font-size: 0.9rem;
+}
+
+.content-about h1 span {
+  color: white;
+}
+
+.img-about {
+  position: relative;
+  width: 300px; /* Sesuaikan ukuran container sesuai kebutuhan */
+}
+
+.img-about img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Atur tumpang tindih gambar about di atas gambar ellipse */
+}
+
+.img-about img:last-child {
+  position: relative;
+  z-index: 1; /* Gambar ellipse diatur di belakang gambar about */
+}
+
+.container-about img {
+  margin-left: 20px;
+  width: 500px;
+}
+
+
 hr{
   border: none;
   margin: 0 3rem;
@@ -243,6 +437,61 @@ hr{
   }
   
   @media screen and (max-width: 768px) {
+    .menu .hamburger {
+      display: block; /* Tampilkan tombol hamburger pada tampilan seluler */
+    }
+    .close-icon {
+      display: none; /* Sembunyikan simbol "X" pada awalnya */
+    }
+  
+    .menu.active .hamburger {
+      display: none; /* Sembunyikan tombol hamburger saat menu aktif */
+    }
+  
+    .menu.active .close-icon {
+      display: block; /* Tampilkan simbol "X" saat menu aktif */
+    }
+
+    .utama {
+      padding: 2rem;
+    }
+  
+    .menu ul {
+      display: none; /* Sembunyikan daftar menu pada tampilan seluler */
+      flex-direction: column;
+      background-color: #040404;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+  
+    .menu.active ul {
+      display: flex; /* Tampilkan daftar menu ketika tombol hamburger diaktifkan */
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .menu li {
+      margin: 15px 0;
+      text-align: center;
+    }
+  
+    .hamburger.active {
+      background-color: transparent;
+    }
+  
+    .hamburger.active::before,
+    .hamburger.active::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  
+    .hamburger.active::after {
+      transform: rotate(45deg);
+    }
     .wrap-content {
       padding: 2rem; 
       height: auto;
